@@ -44,6 +44,7 @@
   </body>  
 </html>
 ```
+
 * `<!DOCTYPE>` 這個宣告代表著此文件的種類，幫助瀏覽器顯示正確的網頁
 * `<html>` 包裹整個文件，代表 HTML 文件 從哪裡開始、到哪裡結束
 * 在 `<head>` 裡放進所有關於文件的資訊，例如 meta-tags 和 `<title>`
@@ -51,6 +52,7 @@
     - `<title` 會被顯示在瀏覽器的標題欄
 * 在 `<body>` 放進所有我們要呈現的資訊，例如標題、文字、圖像...等
 * 可以利用註解(comments)留下開發者的訊息
+
 ```html
 <!-- this is a single-line comment -->
     
@@ -63,3 +65,34 @@
 -->
 ```
 
+## 屬性(Attributes)
+
+* 標籤屬性可以增加或控制標籤的行為，例如顏色、大小...等等
+
+```html
+<tag attribute1="value1" attribute2="value2">some text</tag> 
+```
+
+* 屬性值使用雙引號( " )或者單引號( ' )包裹起來，否則屬性只會承認等號後面的值
+
+```html
+<!-- with double quotes -->  
+<tag attribute="value with spaces"></tag>  
+<!-- with single quotes -->  
+<tag attribute='value with spaces'></tag>
+
+<!-- without quotes -->  
+<tag attribute=value with spaces></tag>
+<!-- with 和 spaces 將會被視為無效的屬性 -->
+```
+
+### `<img>`
+
+* `<img>` 可以在頁面上嵌入圖像，這個標籤有幾個重要的屬性
+  - `src` ： 圖像的鏈結，`<img>`一定需要此屬性
+  - `alt` ： 圖像的替代文字，當圖像無法顯示或者還在載入中，將會顯示此文字
+  - `height`、`width` ：分別代表圖像畫素的固定高度與寬度
+
+```html
+<img src="path/to/file" alt="some text">
+```
