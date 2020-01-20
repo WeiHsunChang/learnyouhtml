@@ -309,3 +309,95 @@ Preview：
 >     The standard markup language for creating web pages and web                applications.  
 >   </dd>
 > </dl>
+
+# Tables
+
+* `<table>`創建表格
+* `<tr>` ( table row ) 創建列 ( row )
+* `<td>` ( table data ) 創建欄( column )
+
+Example：
+```html
+<table>  
+   <tr>  
+     <td>1.1</td>  
+     <td>1.2</td>  
+   </tr>  
+   <tr>  
+     <td>2.1</td>  
+     <td>2.2</td>  
+   </tr>  
+ </table> 
+```
+
+Preview：
+<table>  
+  <tr>  
+   <td>1.1</td>  
+   <td>1.2</td>  
+  </tr>  
+  <tr>  
+   <td>2.1</td>  
+   <td>2.2</td>  
+  </tr>  
+</table> 
+
+```html
+<table>  
+ ╔═════════════════════╗  
+ ║ <tr>                ║  
+ ║┏━━━━━━━━━┳━━━━━━━━━┓║  
+ ║┃ <td>    ┃ <td>    ┃║  
+ ║┃┌───────┐┃┌───────┐┃║  
+ ║┃│  1.1  │┃│  1.2  │┃║  
+ ║┃└───────┘┃└───────┘┃║  
+ ║┃ </td>   ┃ </td>   ┃║  
+ ║┗━━━━━━━━━┻━━━━━━━━━┛║  
+ ║ </tr>               ║  
+ ╠═════════════════════╣  
+ ║ <tr>                ║  
+ ║┏━━━━━━━━━┳━━━━━━━━━┓║  
+ ║┃ <td>    ┃ <td>    ┃║  
+ ║┃┌───────┐┃┌───────┐┃║  
+ ║┃│  2.1  │┃│  2.2  │┃║  
+ ║┃└───────┘┃└───────┘┃║  
+ ║┃ </td>   ┃ </td>   ┃║  
+ ║┗━━━━━━━━━┻━━━━━━━━━┛║  
+ ║ </tr>               ║  
+ ╚═════════════════════╝  
+ </table>
+ ```
+
+* `<td>` ( table head ) 能替表格加入表頭，且標頭文字將會自動加上粗體
+
+```html
+<table>
+   <tr>
+     <th>First name</th>
+     <th>Last name</th>
+   </tr>
+   <tr>
+     <td>John</td>
+     <td>Doe</td>
+   </tr>
+   <tr>
+     <td>Jane</td>
+     <td>Doe</td>
+   </tr>
+</table>
+ ```
+
+<table>  
+ <tr>  
+   <th>First name</th>
+   <th>Last name</th> 
+ </tr>  
+ <tr>  
+   <td>John</td>  
+   <td>Doe</td>  
+ </tr>  
+ <tr>  
+   <td>Jane</td>  
+   <td>Doe</td>  
+ </tr>  
+</table>
