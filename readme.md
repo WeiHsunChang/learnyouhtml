@@ -1,6 +1,6 @@
 # learnyouhtml
 
-## HTML (HyperText Markup Language)
+# HTML (HyperText Markup Language)
 
 * HTML is a markup language for creating webpages.  
 
@@ -23,7 +23,7 @@
 
 ---
 
-## Tags
+# Tags
 
 * HTML 使用 “標記語言”
 * tags 通常是一對的，各自代表著開頭與結束
@@ -69,7 +69,7 @@
 
 ---
 
-## 屬性(Attributes)
+# 屬性(Attributes)
 
 * 標籤屬性可以增加或控制標籤的行為，例如顏色、大小...等等
 
@@ -90,7 +90,7 @@
 <!-- with 和 spaces 將會被視為無效的屬性 -->
 ```
 
-### `<img>`
+## `<img>`
 
 * `<img>` 可以在頁面上嵌入圖像，這個標籤有幾個重要的屬性
   - `src` ： 圖像的鏈結，`<img>`一定需要此屬性
@@ -103,12 +103,12 @@
 
 ---
 
-## Inline text
+# Inline text
 
 * 有時候我們需要強調文字，例如定義、人名、書名...等
 接下來將會說明如何達成
 
-### Font faces
+## Font faces
 
 * `<strong>`、`<b>` ： 文字粗體
 
@@ -126,7 +126,7 @@
 > <p>Here are few <em>important</em> words</p>
 
 
-### Upper and lower indexes
+## Upper and lower indexes
 
 * 有時數學、物理、化學需要表示上指數與下指數
 * HTML 也有相對應的標籤可以使用
@@ -155,7 +155,7 @@
 
 > <p>My mother has <span style="color:blue">blue</span> eyes.</p>
 
-### Pitfalls
+## Pitfalls
 
 * 在瀏覽器裡，多個空白只會被視為一個空白。下面三個例子的顯示效果是相同的。
 
@@ -195,7 +195,7 @@
 
 ---
 
-## Headings
+# Headings
 
 * 大部分的文章需要有規則的分割內文，HTML 提供了六種等級的標題元素
 
@@ -218,3 +218,94 @@
 * 儘管標題可以增加字體大小，但請不要用此方法來達成，可以使用CSS屬性。
 * 使用標題時避免跳級，總是從`<h1>`開始，下一個使用`<h2>`，以此類推。
 * 通常網頁只用`<h1>`～`<h3>`即可，很少使用更低級的標題。
+
+---
+
+# Lists
+
+* 在HTML裡有三種列表
+  - 有序列表 ( Ordered list )
+  - 無序列表 ( Unorderd list )
+  - 說明列表 ( Definitions list )
+
+## Oreder list
+
+* 如果你想要建立一個有編號的列表，你需要使用`<ol>` ( oreder list 的縮寫 )，且使用`<li>` ( list item 的縮寫 ) 來描述列表的物件
+ 
+Example：
+```html
+<ol>  
+  <li>first item</li>  
+  <li>second item</li>  
+  <li>third item</li>  
+</ol> 
+```
+
+Preview：
+> <ol>  
+>   <li>first item</li>  
+>   <li>second item</li>  
+>   <li>third item</li>  
+> </ol> 
+
+* 有序列表使用升序編號，標號可以是任何形式，像是數字、字母、羅馬數字。
+* `<ol>` 有幾個有用的屬性
+  - `type` ： 指定編號種類
+    - 1 ： 預設，數字
+    - a ： 小寫英文字母編號
+    - A ： 大寫英文字母編號
+    - i ： 小寫羅馬字母編號
+    - I ： 大寫羅馬字母編號
+  - `start` ： 指定編號從第n個開始遞增，n參數總是一個整數
+  - `reversed` ： 列表將使用降續編號
+
+## Unorder list
+
+* 無序列表同樣使用`<li>`描述列表物件。主要的不同處是，改為使用`<ul>` ( unorder list 的縮寫 ) 包裹全部的列表物件。
+
+Example：
+```html
+<ul>  
+  <li>first item</li>  
+  <li>second item</li>  
+  <li>third item</li>  
+</ul>
+```
+
+Preview：
+> <ul type = "disc">  
+>   <li>first item</li>
+>   <li>second item</li>
+>   <li>third item</li>
+> </ul>
+
+* `<ul>` 同樣的可以使用`type`屬性，可替換圓點的樣式
+  - disc ： 預設，實心園
+  - circle ： 空心圓
+  - square ： 方塊
+
+## Definitions lists
+
+* 有時你需要製作一個詞彙表或者 key-value pairs 的列表。`<dl>` ( definitions list 的縮寫 )即是你所需的標籤。
+* `<dl>` 用來封閉所有列表物件
+* `<dt>` (definition term) ： 用來表示說明的項目
+* `<dd>` ： 用來包裹所有的說明
+
+Example：
+```html
+<dl>  
+  <dt>HTML</dt>  
+  <dd>  
+    The standard markup language for creating web pages and web applications.  
+  </dd>  
+<!-- Other terms and descriptions -->  
+</dl>
+```
+
+Preview：
+> <dl>  
+>   <dt>HTML</dt>  
+>   <dd>  
+>     The standard markup language for creating web pages and web                applications.  
+>   </dd>
+> </dl>
