@@ -368,7 +368,7 @@ Preview：
  </table>
  ```
 
-* `<td>` ( table head ) 能替表格加入表頭，且標頭文字將會自動加上粗體
+* `<th>` ( table head ) 能替表格加入表頭，且標頭文字將會自動加上粗體
 
 ```html
 <table>
@@ -401,3 +401,97 @@ Preview：
    <td>Doe</td>  
  </tr>  
 </table>
+
+---
+
+# Blocks
+
+* 接下來將介紹如何使用 UI 元素
+
+## HTML `<div>` element
+
+* `<div>` 是一個流內容( flow content )的常用容器，使用它來集結元素，做樣式調整、製作章節...等的動作
+ 
+Example：
+```html
+<div>  
+  <p>Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!</p>  
+</div>  
+```
+
+Preview：
+<div>  
+  <p>Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!</p>  
+</div>  
+
+## Semantic elements (章節型元素)
+
+![Semantic elements](Semantic&#32;elements&#32;.png)
+
+### HTML `<main>` element
+
+* `<main>` 呈現`<body>`的主要內容
+
+### HTML `<header>` element
+
+* `<header>` 呈現介紹性或導覽性的幫助，通常包含一些標題和其他元素，例如logo、搜尋欄...等等
+
+Example：
+```html
+<header>  
+  <h1>Main Page Title</h1>
+  <img src="site-log.png" alt="Site logo">
+</header>
+```
+
+### HTML `<nav>` element
+
+* `<nav>` 代表一個網頁中提供導航欄連結的區域，可以連結到其他頁面，或者頁面中的其中一部分
+
+Example：
+```html
+ <nav>  
+  <ul>  
+    <li>Home</li>  
+    <li>About</li>  
+    <li>Contact</li>  
+  </ul>  
+</nav> 
+```
+
+### HTML `<footer>` element
+
+* `<footer>` 呈現一個頁尾，通常包含作者資訊、版權、相關文檔的連結。
+
+Example：
+```html
+ <footer>  
+  Some copyright info or perhaps some author info for an &lt;article&gt;?  
+ </footer>  
+```
+
+### HTML `<section>` element
+
+* `<section>` 為文件裡的一個段落。`<section>`需要能夠被清楚辨識，通常都包含一個標題(`<h1>`-`<h6>`element)
+
+Example：
+```html
+<section>  
+  <h1>Heading</h1>
+  <p>Bunch of awesome content</p>  
+</section>
+```
+
+### HTML `<aside>` element
+
+* `<aside>`表示一個和其餘頁面內容幾乎無關的部分。通常為一個側邊欄
+
+```html
+<aside>  
+  <!-- aside content -->  
+</aside>  
+```
+
+### HTML `<article>` element
+
+* `<article>`表示文檔、頁面、應用、網站的一個獨立結構。主要目的為成為可獨立分配、重複使用的結構。例如在PO文、雜誌、新聞文章...等其他獨立內容的項目。
