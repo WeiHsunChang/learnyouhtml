@@ -192,3 +192,29 @@
 
 > <p>Don't be afraid to be <then a 100% success & >more:</p>
 > <p>Don't be afraid to be &lt;then a 100% success &amp; &gt;more:</p>
+
+---
+
+## Headings
+
+* 大部分的文章需要有規則的分割內文，HTML 提供了六種等級的標題元素
+
+```html
+<h1>Heading level 1</h1>  
+<h2>Heading level 2</h2>  
+<h3>Heading level 3</h3>  
+<h4>Heading level 4</h4>  
+<h5>Heading level 5</h5>  
+<h6>Heading level 6</h6> 
+```
+> <h1>Heading level 1</h1>  
+> <h2>Heading level 2</h2>  
+> <h3>Heading level 3</h3>  
+> <h4>Heading level 4</h4>  
+> <h5>Heading level 5</h5>  
+> <h6>Heading level 6</h6> 
+
+* 標題可以吸引讀者的注意力，告訴他這裡有東西必須要讀
+* 儘管標題可以增加字體大小，但請不要用此方法來達成，可以使用CSS屬性。
+* 使用標題時避免跳級，總是從`<h1>`開始，下一個使用`<h2>`，以此類推。
+* 通常網頁只用`<h1>`～`<h3>`即可，很少使用更低級的標題。
