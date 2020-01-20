@@ -21,6 +21,8 @@
 </html>
 ```
 
+---
+
 ## Tags
 
 * HTML 使用 “標記語言”
@@ -65,6 +67,8 @@
 -->
 ```
 
+---
+
 ## 屬性(Attributes)
 
 * 標籤屬性可以增加或控制標籤的行為，例如顏色、大小...等等
@@ -96,3 +100,95 @@
 ```html
 <img src="path/to/file" alt="some text">
 ```
+
+---
+
+## Inline text
+
+* 有時候我們需要強調文字，例如定義、人名、書名...等
+接下來將會說明如何達成
+
+### Font faces
+
+* `<strong>`、`<b>` ： 文字粗體
+
+```html
+<p>Here are few <strong>important</strong> words</p>
+```
+> <p>Here are few <strong>important</strong> words</p>
+
+* `<em>`、`<i>`：文字斜體
+
+```html
+<p>Here are few <em>important</em> words</p>
+```
+
+> <p>Here are few <em>important</em> words</p>
+
+
+### Upper and lower indexes
+
+* 有時數學、物理、化學需要表示上指數與下指數
+* HTML 也有相對應的標籤可以使用
+
+* `<sup>` ： 上指數
+* `<sub>` ： 下指數
+
+```html
+<p><b>The formula of sulfuric acid:</b> <i>H<sub>2</sub>SO<sub>4</sub></i></p>
+
+<p><b>Pythagoras's theorem:</b> a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+```
+
+> <p><b>The formula of sulfuric acid:</b> <i>H<sub>2</sub>SO<sub>4</sub></i></p>
+
+> <p><b>Pythagoras's theorem:</b> a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+
+### Grouping inline elements
+
+* 有時需要包裹其他文字或者元素，不為了表示什麼，只是為了調整樣式。
+* `<span>` 就是為此目的
+
+```html
+<p>My mother has <span style="color:blue">blue</span> eyes.</p>
+```
+
+> <p>My mother has <span style="color:blue">blue</span> eyes.</p>
+
+### Pitfalls
+
+* 在瀏覽器裡，多個空白只會被視為一個空白。下面三個例子的顯示效果是相同的。
+
+```html
+
+<p>one. two. three<p>  
+<p>one.    two.    three<p>  
+<p>one.        two.        three<p>
+
+```
+
+> <p>one. two. three<p>
+
+* HTML 不支援 hyphenation ，編輯器也相同。也就是說，不能將字分開。
+
+* 文字佔用了瀏覽器視窗的所有寬度。
+  - 假如你只寫了一長條的HTML code，瀏覽器將會自動排版它。
+  - 假如文字比視窗寬度還要寬，瀏覽器會出現下方的捲軸。
+
+* Character entity reference (字元實體參照)是一種HTML中一種對字元跳脫序列的表示
+  - 跳脫是當於無法在代碼中寫出所要的字元的時候所採用的，以多個字元的有序組合來表示原本需要的字元的手段
+  - `& quot;` ： double quotation mark ( " )
+  - `& apos;` ： apostrophe (apostrophe-quote) ( ' )
+  - `& amp;` ： ampersand ( & )
+  - `& lt;` ： less-than sign ( < )
+  - `& gt;` ： greater-than sign ( > )
+  - [others symbol](https://dev.w3.org/html5/html-author/charref)
+
+```html
+<h1>Don't be afraid to be <then a 100% success & >more:</h1>
+
+<h1>Don't be afraid to be &lt;then a 100% success &amp; &gt;more:</h1>
+```
+
+> <p>Don't be afraid to be <then a 100% success & >more:</p>
+> <p>Don't be afraid to be &lt;then a 100% success &amp; &gt;more:</p>
