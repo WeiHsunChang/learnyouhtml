@@ -426,7 +426,7 @@ Preview：
 
 ## Semantic elements (章節型元素)
 
-![Semantic elements](Semantic&#32;elements&#32;.png)
+![Semantic elements](https://i.imgur.com/4QOoFFp.png)
 
 ### HTML `<main>` element
 
@@ -558,3 +558,58 @@ Preview：
   - `password` ： 單一行文字，輸入值會被隱藏。
   - `radio` ： 單選按鈕，必須使用`value`屬性來定義被提交的值。可使用`checked`屬性預設這個物件是已經被選擇的。
   - `submit` ： 一個可以提交此表單的按鈕。
+
+---
+
+# Styles and Scripts
+
+* You can attach a special resources to your page, like styles or scripts.
+
+## Styles
+
+* CSS( Cascading Style Sheets) 是一個樣式表語言，用於描述HTML文件的呈現方式。
+* 可以使用`<style>`標籤加入CSS。被寫在`<style>`裡的樣式指令預設地被認為CSS。
+
+Example：
+```html
+<style type="text/css">  
+  body {  
+    color: red;  
+  }  
+</style>
+```
+
+* 另一個加入樣式的方法是直接連結一個樣式檔，藉由使用`<link>`標籤。
+* `<link>`說明了目前的文件和外部資源的關係。
+  以下為幾個重要的屬性。
+  - `href` ： 指明了被連結的資源的URL。URL可以是絕對路徑或者相對路徑。
+  - `rel` ： 命名了被連結的文件和目前文件的關係。
+
+Example：
+```html
+<link href="style.css" rel="stylesheet">
+```
+
+## Scripts
+
+* 如果你需要在HTML文件裡加進JavaScript邏輯。`<script>`標籤正是你所需的。
+* `<script>`被用來嵌入或引用可執行的腳本。以下為幾個重要的屬性。
+  - `src` ： 指明了外部腳本的URI。這也可以當作一個直接在文件嵌入腳本的方法，但假如`src`屬性被使用了，就不可以在`<script>`裡嵌入腳本。
+  - `type` ： 指定`<script>`標籤中的腳本類型
+  - `async` ： 會非同步去請求外部腳本，回應後停止解析執行腳本內容
+  - `defer` ：也會非同步請求外部腳本，但是等待瀏覽器解析完才執行
+
+![ScriptAttribute](https://i.imgur.com/q9ekvAh.jpg)
+
+Example：
+1.行內腳本
+```html
+<script>  
+  console.log('Hello, world!');  
+</script>
+```
+
+2.外部檔案的腳本
+```html
+<script src="javascript.js"></script> 
+```
