@@ -535,3 +535,26 @@ Example：
 
 Preview：
 <a href="mailto:email@someone.com">Send email to someone</a>
+
+---
+
+# Forms
+
+* 你絕對記得有些網站會有Email或者username和password的輸入區域。接下將會說明如何創造它。
+* `<form>`代表一個包含互動性的控制去提交資訊的文件段落。以下介紹幾個最重要的屬性。
+  - `action` ： 提交表單時，向某處發送資料
+  - `method` ： 規定使用的 HTML 方法
+    - value 為 post 時使用 POST 方法
+    - value 為 get 時使用 GET 方法
+  - `name` ： 表單的名字。文件裡表單的名字不能重複。
+
+* 知道`<form>`後，你需要知道的是`<input>`。
+* `<input>`被用來創造一個互動性的控制，為了接受來自用戶端的資料。`<input>`如何運作，取決於`type`屬性的值。
+* 以下為一些`type`使用的值
+  - `text` ： 預設，單一行的文字。輸入值中的換行會自動地移除
+  - `button` ： 一個可點擊的按鈕，沒有任何預設的行為，可使用JS添加行為。
+  - `checkbox` ： 一個檢查鈕，必須使用`value`屬性來定義被提交的值。可使用`checked`屬性預設這個物件是已經被選擇的。
+  - `file` ： 提供一個控制給使用者選擇一個檔案，包含文字和一個“瀏覽”按鈕。
+  - `password` ： 單一行文字，輸入值會被隱藏。
+  - `radio` ： 單選按鈕，必須使用`value`屬性來定義被提交的值。可使用`checked`屬性預設這個物件是已經被選擇的。
+  - `submit` ： 一個可以提交此表單的按鈕。
