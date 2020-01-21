@@ -495,3 +495,43 @@ Example：
 ### HTML `<article>` element
 
 * `<article>`表示文檔、頁面、應用、網站的一個獨立結構。主要目的為成為可獨立分配、重複使用的結構。例如在PO文、雜誌、新聞文章...等其他獨立內容的項目。
+
+---
+
+# Links and References
+
+* 連結允許你前往另一個網頁，或者訪問HTML檔案和其他任何種類的檔案。這些檔案甚至能被放置在另一個網站。
+* 為了建立一個連結，你必須告訴瀏覽器，連結是什麼、你想訪問地址的哪一個文件。這裡使用`<a>` ( ancher ) 標籤。
+
+Example：
+```html
+<a href="https://google.com/" target="_blank">Google</a>
+```
+
+Preview：
+<a href="https://google.com/" target="_blank">Google</a>
+
+* `<a>`常用屬性
+  - `href` ： 添加一個URL或 URL fragment
+  - `downland` ： 命令瀏覽器下載URL，而不是訪問它
+  - `target` ： 指定在哪裡打開被連結的URL
+    - `_blank`值可使連結在新的瀏覽器分頁打開
+
+* 當然，也可以使用圖像取代連結文字
+
+Example：
+```html
+<a href="https://google.com" target="_blank">
+  <img src="path/to/google-logo.png" alt="Google logo" />
+</a>
+```
+
+* `<a>`也很常被用來開啟使用者的郵件程式，寄信給收件人
+
+Example：
+```html
+<a href="mailto:email@someone.com">Send email to someone</a>
+```
+
+Preview：
+<a href="mailto:email@someone.com">Send email to someone</a>
